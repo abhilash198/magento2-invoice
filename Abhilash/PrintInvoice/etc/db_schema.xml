@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_invoice" resource="sales" engine="innodb" comment="Sales Invoice">
+        <column xsi:type="int" name="is_printed" nullable="false" default="0" comment="Invoice Print Flag"/>
+    </table>
+    <table name="sales_invoice_grid" resource="sales" engine="innodb" comment="Sales Invoice Grid">
+        <column xsi:type="int" name="is_printed" nullable="false" default="0" comment="Invoice Print Flag"/>
+    </table>
+</schema>

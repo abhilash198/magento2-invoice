@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Invoice\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="is_printed" xsi:type="string">
+                     sales_invoice.is_printed
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <type name="Magento\Sales\Controller\Adminhtml\Invoice\AbstractInvoice\PrintAction">
+        <plugin name="Abhilash_PrintInvoice::beforeSingleInvoicePrint" 
+                type="Abhilash\PrintInvoice\Plugin\Sales\Adminhtml\Invoice\AbstractInvoice\SinglePrint" sortOrder="10"/>
+    </type>
+<!--    <preference for="Magento\Sales\Controller\Adminhtml\Invoice\AbstractInvoice\PrintAction"
+                type="Abhilash\PrintInvoice\Controller\Sales\Adminhtml\Invoice\AbstractInvoice\SinglePrint"/>
+    
+      <preference for="Magento\Sales\Controller\Adminhtml\Invoice\AbstractInvoice\PrintAction"
+                type="Abhilash\PrintInvoice\Controller\Sales\Adminhtml\Invoice\AbstractInvoice\SinglePrint"/>
+    
+    
+    <preference for="Magento\Sales\Controller\Adminhtml\Invoice\AbstractInvoice\Pdfinvoices" 
+                type="Abhilash\PrintInvoice\Controller\Sales\Adminhtml\Invoice\AbstractInvoice\MassPrint"/>
+
+    <preference for="Magento\Sales\Controller\Adminhtml\Invoice\PdfInvoices" 
+                type="Abhilash\PrintInvoice\Controller\Sales\Adminhtml\Invoice\MassPrint"/>-->
+</config>
