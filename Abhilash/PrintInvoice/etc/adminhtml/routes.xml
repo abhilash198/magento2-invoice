@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
-    <router id="standard">
-        <route id="printinvoice" frontName="printinvoice">
-           <module name="Abhilash_PrintInvoice" before="Magento_Sales" />
-        </route>
-    </router>
-</config>
